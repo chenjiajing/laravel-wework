@@ -1,0 +1,23 @@
+{
+    "name": "chenjiajing/laravel-wework",
+    "description": "laravel-wework is laravel package for can be fast develop wework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chenjiajing",
+            "email": "i@chenjiajing.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ChenJiaJing\\WeWork\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ChenJiaJing\\WeWork\\Tests\\": "tests/"
+        }
+    }
+
+}
