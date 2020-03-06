@@ -14,6 +14,11 @@
             "ChenJiaJing\\WeWork\\": "src/"
         }
     },
+    "keywords": [
+        "WeChat",
+        "WeWork",
+        "WeChatDeveloper"
+    ],
     "autoload-dev": {
         "psr-4": {
             "ChenJiaJing\\WeWork\\Tests\\": "tests/"
