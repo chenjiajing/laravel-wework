@@ -3,19 +3,20 @@
 
 namespace WeWork\Exceptions;
 
-/**接口参数异常
- * Class InvalidArgumentException
+/**本地缓存异常
+ * Class LocalCacheException
  * @package WeWork\Exceptions
  */
-class InvalidArgumentException extends \InvalidArgumentException
+class LocalCacheException extends \Exception
 {
+
     /**
      * @var array
      */
     public $raw = [];
 
     /**
-     * InvalidArgumentException constructor.
+     * LocalCacheException constructor.
      * @param string $message
      * @param integer $code
      * @param array $raw
@@ -25,4 +26,5 @@ class InvalidArgumentException extends \InvalidArgumentException
         parent::__construct($message, intval($code));
         $this->raw = $raw;
     }
+
 }

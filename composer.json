@@ -8,8 +8,18 @@
             "email": "i@chenjiajing.com"
         }
     ],
-    "require": {},
+    "require": {
+      "ext-json": "*",
+      "ext-curl": "*",
+      "ext-libxml": "*",
+      "ext-openssl": "*",
+      "ext-mbstring": "*",
+      "ext-simplexml": "*"
+    },
     "autoload": {
+        "classmap": [
+             "WeWork.php"
+      ],
         "psr-4": {
             "ChenJiaJing\\WeWork\\": "src/"
         }

@@ -1,13 +1,14 @@
 <?php
 
 
+
 namespace WeWork\Exceptions;
 
-/**接口参数异常
- * Class InvalidArgumentException
+/**返回异常
+ * Class InvalidResponseException
  * @package WeWork\Exceptions
  */
-class InvalidArgumentException extends \InvalidArgumentException
+class InvalidResponseException extends \Exception
 {
     /**
      * @var array
@@ -15,7 +16,7 @@ class InvalidArgumentException extends \InvalidArgumentException
     public $raw = [];
 
     /**
-     * InvalidArgumentException constructor.
+     * InvalidResponseException constructor.
      * @param string $message
      * @param integer $code
      * @param array $raw
@@ -25,4 +26,5 @@ class InvalidArgumentException extends \InvalidArgumentException
         parent::__construct($message, intval($code));
         $this->raw = $raw;
     }
+
 }

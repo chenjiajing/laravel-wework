@@ -1,13 +1,12 @@
 <?php
 
-
 namespace WeWork\Exceptions;
 
-/**接口参数异常
- * Class InvalidArgumentException
+/**加密解密异常
+ * Class InvalidDecryptException
  * @package WeWork\Exceptions
  */
-class InvalidArgumentException extends \InvalidArgumentException
+class InvalidDecryptException extends \Exception
 {
     /**
      * @var array
@@ -15,7 +14,7 @@ class InvalidArgumentException extends \InvalidArgumentException
     public $raw = [];
 
     /**
-     * InvalidArgumentException constructor.
+     * InvalidDecryptException constructor.
      * @param string $message
      * @param integer $code
      * @param array $raw

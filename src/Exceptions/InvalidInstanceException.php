@@ -3,11 +3,11 @@
 
 namespace WeWork\Exceptions;
 
-/**接口参数异常
- * Class InvalidArgumentException
+/**加载类异常
+ * Class InvalidInstanceException
  * @package WeWork\Exceptions
  */
-class InvalidArgumentException extends \InvalidArgumentException
+class InvalidInstanceException extends \Exception
 {
     /**
      * @var array
@@ -15,7 +15,7 @@ class InvalidArgumentException extends \InvalidArgumentException
     public $raw = [];
 
     /**
-     * InvalidArgumentException constructor.
+     * InvalidResponseException constructor.
      * @param string $message
      * @param integer $code
      * @param array $raw
