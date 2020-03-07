@@ -10,6 +10,9 @@ class WeWorkServiceProvider extends ServiceProvider
     public function boot()
     {
 
+      $this->publishes([
+        __DIR__.'/config/wework.php' => config_path('wework.php'),
+      ]);
     }
 
     public function  register()
