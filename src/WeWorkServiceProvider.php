@@ -11,7 +11,7 @@ class WeWorkServiceProvider extends ServiceProvider
     {
 
       $this->publishes([
-        __DIR__.'/config/wework.php' => config_path('wework.php'),
+        __DIR__.'\..\config\wework.php' => config_path('wework.php'),
       ]);
     }
 
