@@ -40,7 +40,7 @@
     },
     "laravel": {
       "providers": [
-        "chenjiajing\\laravel-wework\\WeWorkServiceProvider"
+        "ChenJiaJing\\WeWork\\WeWorkServiceProvider"
       ],
       "aliases": {
       }
