@@ -9,9 +9,6 @@ namespace ChenJiaJing\WeWork;
  */
 class User extends  BaseWeWork
 {
-    public function  test(){
-        echo '535353';
-    }
 
   /**
    * @param array $data
