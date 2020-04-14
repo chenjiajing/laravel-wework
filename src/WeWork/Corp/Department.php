@@ -1,13 +1,15 @@
 <?php
 
 
-namespace ChenJiaJing\WeWork;
+namespace ChenJiaJing\WeWork\WeWork\Corp;
+
+use ChenJiaJing\WeWork\Contracts\BaseCorp;
 
 /**部门管理
  * Class Department
  * @package ChenJiaJing\WeWork
  */
-class Department extends  BaseWeWork
+class Department extends  BaseCorp
 {
 
   /** 获取部门列表
@@ -16,20 +18,18 @@ class Department extends  BaseWeWork
    * @throws \WeWork\Exceptions\InvalidResponseException
    * @throws \WeWork\Exceptions\LocalCacheException
    */
-  public function list($id = ''){
+  public function list($id = null){
     $url = "https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=ACCESS_TOKEN&ID={$id}";
-    $this->registerApi($url, __FUNCTION__, func_get_args());
-    return $this->httpGetForJson($url);
+    return $this->callGetApi($url);
   }
 
-  /**获取部门列表
+  /**创建部门
    * @return array
    * @throws \WeWork\Exceptions\InvalidResponseException
    * @throws \WeWork\Exceptions\LocalCacheException
    */
   public function create($data){
     $url = "https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=ACCESS_TOKEN";
-    $this->registerApi($url, __FUNCTION__, func_get_args());
-    return $this->httpPostForJson($url,$data);
+    return $this->callPostApi($url,$data);
   }
 }
