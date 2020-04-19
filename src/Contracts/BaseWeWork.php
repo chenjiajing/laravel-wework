@@ -31,8 +31,8 @@ class BaseWeWork
    * @param string $url 接口地址
    * @return array|mixed
    * @throws InvalidResponseException
-   * @throws \WeWork\Exceptions\InvalidResponseException
-   * @throws \WeWork\Exceptions\LocalCacheException
+   * @throws InvalidResponseException
+   * @throws LocalCacheException
    */
     protected function httpGetForJson($url)
     {
@@ -65,8 +65,8 @@ class BaseWeWork
      * @param array $data 请求数据
      * @param bool $buildToJson
      * @return array
-     * @throws \WeWork\Exceptions\InvalidResponseException
-     * @throws \WeWork\Exceptions\LocalCacheException
+     * @throws InvalidResponseException
+     * @throws LocalCacheException
      */
     protected function httpPostForJson($url, array $data, $buildToJson = true)
     {
@@ -121,8 +121,8 @@ class BaseWeWork
    * @param bool $isBuildJson
    * @throws InvalidResponseException
    * @throws LocalCacheException
-   * @throws \WeWork\Exceptions\InvalidResponseException
-   * @throws \WeWork\Exceptions\LocalCacheException
+   * @throws InvalidResponseException
+   * @throws LocalCacheException
    */
     public function callPostApi($url, array $data, $isBuildJson = true)
     {
@@ -136,8 +136,8 @@ class BaseWeWork
      * @return array
      * @throws InvalidResponseException
      * @throws LocalCacheException
-     * @throws \WeWork\Exceptions\InvalidResponseException
-     * @throws \WeWork\Exceptions\LocalCacheException
+     * @throws InvalidResponseException
+     * @throws LocalCacheException
      */
     public function callGetApi($url)
     {
