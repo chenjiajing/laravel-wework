@@ -6,6 +6,8 @@ namespace ChenJiaJing\WeWork\Contracts;
 
 use ChenJiaJing\WeWork\BaseWeWork;
 use ChenJiaJing\WeWork\Exceptions\InvalidArgumentException;
+use ChenJiaJing\WeWork\Exceptions\InvalidResponseException;
+use ChenJiaJing\WeWork\Exceptions\LocalCacheException;
 use ChenJiaJing\WeWork\Tools\ArrayTools;
 use ChenJiaJing\WeWork\Tools\CacheTools;
 use ChenJiaJing\WeWork\Tools\HttpTools;
@@ -56,8 +58,8 @@ class BaseCorp extends BaseWeWork
 
   /**
    * @return mixed|string|null
-   * @throws \WeWork\Exceptions\InvalidResponseException
-   * @throws \WeWork\Exceptions\LocalCacheException
+   * @throws InvalidResponseException
+   * @throws LocalCacheException
    */
     public function getAccessToken()
     {
