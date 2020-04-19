@@ -2,11 +2,11 @@
 
 
 
-namespace WeWork\Exceptions;
+namespace ChenJiaJing\WeWork\Exceptions;
 
 /**返回异常
  * Class InvalidResponseException
- * @package WeWork\Exceptions
+ * @package ChenJiaJing\WeWork\Exceptions
  */
 class InvalidResponseException extends \Exception
 {

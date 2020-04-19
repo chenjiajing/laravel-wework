@@ -1,11 +1,11 @@
 <?php
 
 
-namespace WeWork\Exceptions;
+namespace ChenJiaJing\WeWork\Exceptions;
 
 /**加载类异常
  * Class InvalidInstanceException
- * @package WeWork\Exceptions
+ * @package ChenJiaJing\WeWork\Exceptions
  */
 class InvalidInstanceException extends \Exception
 {

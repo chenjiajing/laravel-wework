@@ -1,11 +1,11 @@
 <?php
 
 
-namespace WeWork\Exceptions;
+namespace ChenJiaJing\WeWork\Exceptions;
 
 /**接口参数异常
  * Class InvalidArgumentException
- * @package WeWork\Exceptions
+ * @package ChenJiaJing\WeWork\Exceptions
  */
 class InvalidArgumentException extends \InvalidArgumentException
 {

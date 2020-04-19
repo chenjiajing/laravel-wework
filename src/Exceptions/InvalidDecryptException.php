@@ -1,10 +1,10 @@
 <?php
 
-namespace WeWork\Exceptions;
+namespace  ChenJiaJing\WeWork\Exceptions;
 
 /**加密解密异常
  * Class InvalidDecryptException
- * @package WeWork\Exceptions
+ * @package ChenJiaJing\WeWork\Exceptions
  */
 class InvalidDecryptException extends \Exception
 {

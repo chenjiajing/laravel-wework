@@ -24,11 +24,11 @@ class BaseCorp extends BaseWeWork
     public $access_token = '';
 
 
-    /**
-     * BaseCorp constructor.
-     * @param null $secret
-     * @param null $corpid
-     */
+  /**
+   * BaseCorp constructor.
+   * @param null $secret
+   * @param null $corpid
+   */
     public function __construct($secret = null,$corpid = null)
     {
         // 企业id
@@ -53,11 +53,12 @@ class BaseCorp extends BaseWeWork
         parent::__construct($this->config);
     }
 
-    /**
-     * @return int|string
-     * @throws LocalCacheException
-     * @throws InvalidResponseException
-     */
+
+  /**
+   * @return mixed|string|null
+   * @throws \WeWork\Exceptions\InvalidResponseException
+   * @throws \WeWork\Exceptions\LocalCacheException
+   */
     public function getAccessToken()
     {
         if (!empty($this->access_token)) {
@@ -72,7 +73,6 @@ class BaseCorp extends BaseWeWork
         list($corpid, $secret) = [$this->config->get('corpid'), $this->config->get('secret')];
         $url    = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={$corpid}&corpsecret={$secret}";
         $result = HttpTools::json2arr(HttpTools::get($url));
-        info_data($result);
         if (!empty($result['access_token'])) {
             CacheTools::setCache($cache, $result['access_token'], 7000);
         }

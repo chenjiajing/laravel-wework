@@ -1,11 +1,11 @@
 <?php
 
 
-namespace WeWork\Exceptions;
+namespace ChenJiaJing\WeWork\Exceptions;
 
 /**本地缓存异常
  * Class LocalCacheException
- * @package WeWork\Exceptions
+ * @package ChenJiaJing\WeWork\Exceptions
  */
 class LocalCacheException extends \Exception
 {

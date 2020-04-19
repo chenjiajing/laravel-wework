@@ -7,9 +7,9 @@ namespace ChenJiaJing\WeWork;
 use ChenJiaJing\WeWork\Tools\ArrayTools;
 use ChenJiaJing\WeWork\Tools\CacheTools;
 use ChenJiaJing\WeWork\Tools\HttpTools;
-use WeWork\Exceptions\InvalidArgumentException;
-use WeWork\Exceptions\InvalidResponseException;
-use WeWork\Exceptions\LocalCacheException;
+use ChenJiaJing\WeWork\Exceptions\InvalidArgumentException;
+use  ChenJiaJing\WeWork\Exceptions\InvalidResponseException;
+use  ChenJiaJing\WeWork\Exceptions\LocalCacheException;
 
 class BaseWeWork
 {
@@ -25,13 +25,15 @@ class BaseWeWork
         $this->config = $config;
     }
 
-    /**
-     * 以GET获取接口数据并转为数组
-     * @param string $url 接口地址
-     * @return array
-     * @throws InvalidResponseException
-     * @throws LocalCacheException
-     */
+  /**
+   *     /**
+   * 以GET获取接口数据并转为数组
+   * @param string $url 接口地址
+   * @return array|mixed
+   * @throws InvalidResponseException
+   * @throws \WeWork\Exceptions\InvalidResponseException
+   * @throws \WeWork\Exceptions\LocalCacheException
+   */
     protected function httpGetForJson($url)
     {
         try {
@@ -63,8 +65,8 @@ class BaseWeWork
      * @param array $data 请求数据
      * @param bool $buildToJson
      * @return array
-     * @throws InvalidResponseException
-     * @throws LocalCacheException
+     * @throws \WeWork\Exceptions\InvalidResponseException
+     * @throws \WeWork\Exceptions\LocalCacheException
      */
     protected function httpPostForJson($url, array $data, $buildToJson = true)
     {
@@ -111,15 +113,17 @@ class BaseWeWork
         return $url = str_replace($token_type, $this->access_token, $url);
     }
 
-    /**
-     * 接口通用POST请求方法
-     * @param string $url 接口URL
-     * @param array $data POST提交接口参数
-     * @param bool $isBuildJson
-     * @return array
-     * @throws InvalidResponseException
-     * @throws LocalCacheException
-     */
+
+  /**
+   * 接口通用POST请求方法
+   * @param string $url 接口URL
+   * @param array $data POST提交接口参数
+   * @param bool $isBuildJson
+   * @throws InvalidResponseException
+   * @throws LocalCacheException
+   * @throws \WeWork\Exceptions\InvalidResponseException
+   * @throws \WeWork\Exceptions\LocalCacheException
+   */
     public function callPostApi($url, array $data, $isBuildJson = true)
     {
         $this->registerApi($url, __FUNCTION__, func_get_args());
@@ -132,6 +136,8 @@ class BaseWeWork
      * @return array
      * @throws InvalidResponseException
      * @throws LocalCacheException
+     * @throws \WeWork\Exceptions\InvalidResponseException
+     * @throws \WeWork\Exceptions\LocalCacheException
      */
     public function callGetApi($url)
     {
