@@ -32,6 +32,6 @@ class Oauth extends BaseCorp
     public function getUserInfo($code)
     {
         $url = "https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=ACCESS_TOKEN&code={$code}";
-        return $this->httpGetForJson($url);
+        return $this->callGetApi($url);
     }
 }
