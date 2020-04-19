@@ -6,14 +6,15 @@ namespace ChenJiaJing\WeWork\WeWork\Corp;
 
 use ChenJiaJing\WeWork\Contracts\BaseCorp;
 use Illuminate\Support\Str;
-use WeWork\Exceptions\InvalidResponseException;
+use ChenJiaJing\WeWork\Exceptions\InvalidResponseException;
+use ChenJiaJing\WeWork\Exceptions\LocalCacheException;
 
 class JsSdk extends BaseCorp
 {
   /**
    * @return mixed
    * @throws InvalidResponseException
-   * @throws \WeWork\Exceptions\LocalCacheException
+   * @throws LocalCacheException
    */
   public function getTicket()
   {
@@ -32,7 +33,7 @@ class JsSdk extends BaseCorp
    * @param $jsdomain
    * @return array
    * @throws InvalidResponseException
-   * @throws \WeWork\Exceptions\LocalCacheException
+   * @throws LocalCacheException
    */
   public function getJsApiTicket($jsdomain, $corpid = null, $agentid = null)
   {

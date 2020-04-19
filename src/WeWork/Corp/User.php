@@ -4,6 +4,8 @@
 namespace ChenJiaJing\WeWork\WeWork\Corp;
 
 use ChenJiaJing\WeWork\Contracts\BaseCorp;
+use ChenJiaJing\WeWork\Exceptions\InvalidResponseException;
+use ChenJiaJing\WeWork\Exceptions\LocalCacheException;
 
 /**成员管理
  * Class User
@@ -15,8 +17,8 @@ class User extends BaseCorp
     /**
      * @param array $data
      * @return array
-     * @throws \WeWork\Exceptions\InvalidResponseException
-     * @throws \WeWork\Exceptions\LocalCacheException
+     * @throws InvalidResponseException
+     * @throws LocalCacheException
      */
     public function create($data = [])
     {
@@ -27,8 +29,8 @@ class User extends BaseCorp
     /**
      * @param string $SIZE_TYPE
      * @return array
-     * @throws \WeWork\Exceptions\InvalidResponseException
-     * @throws \WeWork\Exceptions\LocalCacheException
+     * @throws InvalidResponseException
+     * @throws LocalCacheException
      */
     public function getJoinQrCode($SIZE_TYPE = '')
     {

@@ -5,6 +5,8 @@ namespace ChenJiaJing\WeWork\WeWork\Corp;
 
 
 use ChenJiaJing\WeWork\Contracts\BaseCorp;
+use ChenJiaJing\WeWork\Exceptions\InvalidResponseException;
+use ChenJiaJing\WeWork\Exceptions\LocalCacheException;
 
 class Oauth extends BaseCorp
 {
@@ -26,8 +28,8 @@ class Oauth extends BaseCorp
     /**
      * 获取用户userid
      * @param string $openid 用户的唯一标识
-     * @throws Exceptions\InvalidResponseException
-     * @throws Exceptions\LocalCacheException
+     * @throws InvalidResponseException
+     * @throws LocalCacheException
      */
     public function getUserInfo($code)
     {
